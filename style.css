@@ -5,6 +5,12 @@
 }
 body {
   background: #1f2022;
+  overflow: hidden;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
 }
 .container {
   max-width: 1400px;
@@ -16,6 +22,11 @@ body {
   background-position: left top;
   background-size: contain;
   background-repeat: no-repeat;
+  /* min-height: 882px; */
+  height: calc(100vh - 100px);
+}
+.header {
+  padding: 25px 0;
 }
 .header__container {
   display: flex;
@@ -39,12 +50,146 @@ body {
 .nav__link-active {
   color: #00adb5;
 }
-.nav__link:hover {
-  color: #00adb5;
+@media (any-hover: hover) {
+  .nav__link:hover {
+    color: #00adb5;
+  }
 }
+
 .logo {
   color: #eee;
   font-family: Josefin Sans;
   font-size: 24px;
   text-decoration: none;
+}
+.btn {
+  border: none;
+  color: #000;
+  font-family: Josefin Sans;
+  font-size: 18px;
+  padding: 16px;
+  border-radius: 3px;
+  background: #eee;
+  cursor: pointer;
+}
+.hero__left,
+.hero__content {
+  grid-column: 6 span;
+  padding-bottom: 40px;
+}
+.hero__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.hero__level {
+  position: relative;
+  max-width: 380px;
+  padding-left: 30px;
+  color: #eee;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 800;
+  margin-top: 30vh;
+}
+.hero__level::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 0;
+  width: 20px;
+  height: 3px;
+  background: #00adb5;
+}
+.hero__left-text {
+  color: #00adb5;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 800;
+  max-width: 200px;
+}
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 120px;
+  padding-left: 42px;
+}
+.hero__hello {
+  margin-bottom: 30px;
+  color: #eee;
+  font-family: Josefin Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  max-width: 355px;
+}
+.hero__hello span {
+  color: #00adb5;
+  font-family: Montserrat;
+  font-size: 100px;
+  font-weight: 800;
+}
+.hero__descr {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: Josefin Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: auto;
+}
+.latest-shots__content {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  width: calc(100% + 70px);
+  margin-bottom: 20px;
+}
+.latest-shots__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 25px;
+}
+.latest-shots__title {
+  margin: 0;
+  margin-right: 20px;
+  color: #fff;
+  font-family: Josefin Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+.latest-shots__all {
+  color: #00adb5;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  text-decoration: none;
+}
+.latest-shots__img {
+  max-width: 250px;
+  border-radius: 5px;
+}
+.latest-shots__nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.latest-shots__btn {
+  width: 28px;
+  height: 28px;
+}
+.latest-shots__btn svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  fill: white;
+  background: inherit;
+}
+.latest-shots__nav button {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
 }
