@@ -10,7 +10,12 @@
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -32,7 +37,7 @@
             </li>
           </ul>
         </nav>
-        <button class="btn">Schedule a call</button>
+        <button class="btn header__btn">Schedule a call</button>
       </div>
     </header>
     <main>
@@ -61,15 +66,40 @@
                 <a href="" class="latest-shots__all">View all</a>
               </div>
               <div class="latest-shots__content">
-                <a href="" class="latest-shots__link">
-                  <img src="img/1.jpg" class="latest-shots__img" />
-                </a>
-                <a href="" class="latest-shots__link">
-                  <img src="img/2.jpg" class="latest-shots__img" />
-                </a>
-                <a href="" class="latest-shots__link">
-                  <img src="img/3.jpg" class="latest-shots__img" />
-                </a>
+                <div class="swiper" id="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a href="" class="latest-shots__link">
+                        <img src="img/1.jpg" class="latest-shots__img" />
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="" class="latest-shots__link">
+                        <img src="img/2.jpg" class="latest-shots__img" />
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="" class="latest-shots__link">
+                        <img src="img/3.jpg" class="latest-shots__img" />
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="" class="latest-shots__link">
+                        <img src="img/1.jpg" class="latest-shots__img" />
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="" class="latest-shots__link">
+                        <img src="img/2.jpg" class="latest-shots__img" />
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="" class="latest-shots__link">
+                        <img src="img/3.jpg" class="latest-shots__img" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="latest-shots__nav">
                 <button
@@ -117,6 +147,24 @@
         </div>
       </section>
     </main>
+    <div class="modal-parent">
+      <div class="modal-wrapper">
+        <div class="modal">
+          <h2 class="modal__title">Schedule a call</h2>
+          <form action="#" class="form">
+            <label class="form__field">
+              <span class="form__text">Name</span>
+              <input type="text" name="name" class="form__input" />
+            </label>
+            <label class="form__field">
+              <span class="form__text">Phone</span>
+              <input type="tel" name="phone" class="form__input" />
+            </label>
+            <button class="btn form__btn">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>
