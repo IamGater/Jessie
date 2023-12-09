@@ -241,3 +241,49 @@ body {
   opacity: 1;
   visibility: visible;
 }
+@media (max-width: 1024px) {
+  .hero{
+    background-position: left -100px top;
+    background-size: cover;
+  }
+  .hero__hello span{
+    font-size: 80px;
+  }
+}
+@media (max-width: 768px){
+  main{
+    overflow: hidden;
+  }
+  .grid{
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .hero{
+    background-position: center bottom;
+  }
+  .nav{
+    display: none;
+  }
+  .hero__level{
+    display: none;
+  }
+  .hero__left{
+    align-items: center;
+  }
+  .hero__left-text{
+    max-width: 100%;
+  }
+  .hero__content{
+    padding: 0;
+    /* align-items: center; */
+  }
+  .hero__hello{
+    text-align: center;
+    margin: 0 auto;
+  }
+  .hero__hello span{
+    display: block;
+  }
+  .hero__descr{
+    text-align: center;
+  }
+}
