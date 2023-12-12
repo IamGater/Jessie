@@ -1,5 +1,8 @@
 const modal = document.querySelector(".modal-parent");
 const btn = document.querySelector(".header__btn");
+const burger = document.querySelector(".burger");
+const list = document.querySelector(".nav__list");
+const nav = document.querySelector(".nav");
 
 btn.addEventListener("click", () => {
   modal.classList.toggle("modal-parent--open");
@@ -25,4 +28,10 @@ const swiper = new Swiper(".swiper", {
     prevEl: ".latest-shots__left",
     nextEl: ".latest-shots__right",
   },
+});
+
+burger.addEventListener("click", () => {
+  burger.classList.toggle("active");
+  list.classList.toggle("active");
+  nav.classList.toggle("active");
 });
